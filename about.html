@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book Haven Bookstore student website project">
+  <title>About & Contact | Book Haven Bookstore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="about">
+  <a class="skip-link" href="#mainContent">Skip to main content</a>
+  
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Book Haven home">
+    <span class="brand-mark" aria-hidden="true">BH</span>
+    <span>Book Haven Bookstore</span>
+  </a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mainNav">Menu</button>
+  <nav id="mainNav" class="main-nav" aria-label="Primary navigation">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Book Gallery</a>
+    <a href="about.html">About & Contact</a>
+    <a href="events.html">Reading Events</a>
+  </nav>
+</header>
+
+  <main id="mainContent">
+    
+<section class="page-hero compact-hero">
+  <p class="eyebrow">About & Contact</p>
+  <h1>A local store built around helpful recommendations.</h1>
+  <p>Book Haven Bookstore is a fictional independent bookstore that promotes approachable book discovery, community reading, and easy special-order communication.</p>
+</section>
+<section class="split-section">
+  <div>
+    <h2>Store information</h2>
+    <p>The website supports customer engagement by clearly showing store hours, visit information, and a contact form for special requests.</p>
+    <table class="hours-table">
+      <caption>Weekly business hours</caption>
+      <thead><tr><th scope="col">Day</th><th scope="col">Hours</th></tr></thead>
+      <tbody>
+        <tr><td>Monday - Thursday</td><td>10:00 AM - 7:00 PM</td></tr>
+        <tr><td>Friday</td><td>10:00 AM - 8:00 PM</td></tr>
+        <tr><td>Saturday</td><td>9:00 AM - 8:00 PM</td></tr>
+        <tr><td>Sunday</td><td>11:00 AM - 5:00 PM</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <form id="requestForm" class="panel-form" novalidate>
+    <h2>Contact or special-order request</h2>
+    <label for="customerName">Name</label>
+    <input id="customerName" name="customerName" type="text" required>
+    <label for="customerEmail">Email</label>
+    <input id="customerEmail" name="customerEmail" type="email" required>
+    <label for="phone">Phone number</label>
+    <input id="phone" name="phone" type="tel" placeholder="Optional">
+    <label for="requestType">Request type</label>
+    <select id="requestType" name="requestType">
+      <option>Special book order</option>
+      <option>Event question</option>
+      <option>General feedback</option>
+    </select>
+    <label for="requestDetails">Message</label>
+    <textarea id="requestDetails" name="requestDetails" rows="5" required></textarea>
+    <label class="checkbox-row"><input id="customOrder" type="checkbox" name="customOrder"> This is a custom order request.</label>
+    <div class="form-buttons"><button type="submit">Submit Request</button><button type="reset" class="neutral-btn">Clear Form</button></div>
+    <p id="requestMessage" class="form-message" aria-live="polite"></p>
+  </form>
+</section>
+
+  </main>
+  
+<footer class="site-footer">
+  <section class="footer-newsletter" aria-labelledby="newsletterHeading">
+    <h2 id="newsletterHeading">Join the reading list</h2>
+    <p>Receive monthly staff picks, event updates, and special-order reminders.</p>
+    <form id="subscribeForm" class="inline-form" novalidate>
+      <label for="subscribeEmail">Email address</label>
+      <input id="subscribeEmail" name="subscribeEmail" type="email" placeholder="reader@example.com" required>
+      <button type="submit">Subscribe</button>
+    </form>
+    <p id="subscribeMessage" class="form-message" aria-live="polite"></p>
+  </section>
+  <nav class="footer-links" aria-label="Footer navigation">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">Contact</a>
+    <a href="events.html">Events</a>
+  </nav>
+  <p class="copyright">© 2026 Book Haven Bookstore. Fictional student project.</p>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>

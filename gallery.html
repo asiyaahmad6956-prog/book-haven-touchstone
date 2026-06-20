@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book Haven Bookstore student website project">
+  <title>Book Gallery | Book Haven Bookstore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="gallery">
+  <a class="skip-link" href="#mainContent">Skip to main content</a>
+  
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Book Haven home">
+    <span class="brand-mark" aria-hidden="true">BH</span>
+    <span>Book Haven Bookstore</span>
+  </a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mainNav">Menu</button>
+  <nav id="mainNav" class="main-nav" aria-label="Primary navigation">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Book Gallery</a>
+    <a href="about.html">About & Contact</a>
+    <a href="events.html">Reading Events</a>
+  </nav>
+</header>
+
+  <main id="mainContent">
+    
+<section class="page-hero compact-hero">
+  <p class="eyebrow">Book Gallery</p>
+  <h1>Featured shelves and reader-friendly bundles</h1>
+  <p>Customers can review featured products and use the cart tool to prepare a pickup list before calling or visiting the store.</p>
+  <button id="viewCartBtn" class="btn primary" type="button">View Cart</button>
+</section>
+<section class="product-grid" aria-label="Book and product gallery">
+
+<article class="product-card">
+  <img src="images/quiet-moon.svg" alt="Cover illustration for Quiet Moon">
+  <div class="product-copy">
+    <p class="tag">Literary fiction</p>
+    <h3>Quiet Moon</h3>
+    <p>A reflective novel for readers who enjoy slower stories and strong character writing.</p>
+    <div class="product-footer"><strong>$18.00</strong><button class="add-cart" type="button" data-title="Quiet Moon" data-price="$18.00">Add to Cart</button></div>
+  </div>
+</article>
+
+<article class="product-card">
+  <img src="images/garden-atlas.svg" alt="Cover illustration for Garden Atlas">
+  <div class="product-copy">
+    <p class="tag">Nature reference</p>
+    <h3>Garden Atlas</h3>
+    <p>A compact guide for hobby gardeners and plant lovers.</p>
+    <div class="product-footer"><strong>$22.00</strong><button class="add-cart" type="button" data-title="Garden Atlas" data-price="$22.00">Add to Cart</button></div>
+  </div>
+</article>
+
+<article class="product-card">
+  <img src="images/city-notes.svg" alt="Cover illustration for City Notes">
+  <div class="product-copy">
+    <p class="tag">Essay collection</p>
+    <h3>City Notes</h3>
+    <p>Short essays about public spaces, travel, and city routines.</p>
+    <div class="product-footer"><strong>$16.50</strong><button class="add-cart" type="button" data-title="City Notes" data-price="$16.50">Add to Cart</button></div>
+  </div>
+</article>
+
+<article class="product-card">
+  <img src="images/beginner-coding.svg" alt="Cover illustration for Beginner Coding">
+  <div class="product-copy">
+    <p class="tag">Technology</p>
+    <h3>Beginner Coding</h3>
+    <p>An approachable programming book for teens and adult beginners.</p>
+    <div class="product-footer"><strong>$28.00</strong><button class="add-cart" type="button" data-title="Beginner Coding" data-price="$28.00">Add to Cart</button></div>
+  </div>
+</article>
+
+<article class="product-card">
+  <img src="images/journal-set.svg" alt="Cover illustration for Journal Set">
+  <div class="product-copy">
+    <p class="tag">Stationery</p>
+    <h3>Journal Set</h3>
+    <p>Two lined journals for class notes, reading logs, or daily planning.</p>
+    <div class="product-footer"><strong>$12.00</strong><button class="add-cart" type="button" data-title="Journal Set" data-price="$12.00">Add to Cart</button></div>
+  </div>
+</article>
+
+<article class="product-card">
+  <img src="images/young-reader.svg" alt="Cover illustration for Young Reader Pack">
+  <div class="product-copy">
+    <p class="tag">Children</p>
+    <h3>Young Reader Pack</h3>
+    <p>A friendly starter bundle for early independent readers.</p>
+    <div class="product-footer"><strong>$15.00</strong><button class="add-cart" type="button" data-title="Young Reader Pack" data-price="$15.00">Add to Cart</button></div>
+  </div>
+</article>
+
+<article class="product-card">
+  <img src="images/travel-shelf.svg" alt="Cover illustration for Travel Shelf">
+  <div class="product-copy">
+    <p class="tag">Travel writing</p>
+    <h3>Travel Shelf</h3>
+    <p>Stories and maps for customers planning future trips.</p>
+    <div class="product-footer"><strong>$19.00</strong><button class="add-cart" type="button" data-title="Travel Shelf" data-price="$19.00">Add to Cart</button></div>
+  </div>
+</article>
+
+<article class="product-card">
+  <img src="images/mystery-bundle.svg" alt="Cover illustration for Mystery Bundle">
+  <div class="product-copy">
+    <p class="tag">Surprise pick</p>
+    <h3>Mystery Bundle</h3>
+    <p>A wrapped surprise book selected by staff based on broad interests.</p>
+    <div class="product-footer"><strong>$20.00</strong><button class="add-cart" type="button" data-title="Mystery Bundle" data-price="$20.00">Add to Cart</button></div>
+  </div>
+</article>
+</section>
+<section id="cartModal" class="cart-modal" aria-labelledby="cartTitle" aria-hidden="true">
+  <div class="cart-panel" role="dialog" aria-modal="true">
+    <button id="closeCartBtn" class="close-btn" type="button" aria-label="Close cart">×</button>
+    <h2 id="cartTitle">Shopping Cart</h2>
+    <p class="muted">Items in this cart are saved with sessionStorage for this browsing session.</p>
+    <ul id="cartList" class="cart-list"></ul>
+    <p id="cartEmpty" class="form-message">Your cart is empty.</p>
+    <div class="cart-actions">
+      <button id="clearCartBtn" type="button">Clear Cart</button>
+      <button id="processOrderBtn" type="button">Process Order</button>
+    </div>
+  </div>
+</section>
+
+  </main>
+  
+<footer class="site-footer">
+  <section class="footer-newsletter" aria-labelledby="newsletterHeading">
+    <h2 id="newsletterHeading">Join the reading list</h2>
+    <p>Receive monthly staff picks, event updates, and special-order reminders.</p>
+    <form id="subscribeForm" class="inline-form" novalidate>
+      <label for="subscribeEmail">Email address</label>
+      <input id="subscribeEmail" name="subscribeEmail" type="email" placeholder="reader@example.com" required>
+      <button type="submit">Subscribe</button>
+    </form>
+    <p id="subscribeMessage" class="form-message" aria-live="polite"></p>
+  </section>
+  <nav class="footer-links" aria-label="Footer navigation">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">Contact</a>
+    <a href="events.html">Events</a>
+  </nav>
+  <p class="copyright">© 2026 Book Haven Bookstore. Fictional student project.</p>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>

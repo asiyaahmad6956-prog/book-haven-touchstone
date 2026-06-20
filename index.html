@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book Haven Bookstore student website project">
+  <title>Home | Book Haven Bookstore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#mainContent">Skip to main content</a>
+  
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Book Haven home">
+    <span class="brand-mark" aria-hidden="true">BH</span>
+    <span>Book Haven Bookstore</span>
+  </a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mainNav">Menu</button>
+  <nav id="mainNav" class="main-nav" aria-label="Primary navigation">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Book Gallery</a>
+    <a href="about.html">About & Contact</a>
+    <a href="events.html">Reading Events</a>
+  </nav>
+</header>
+
+  <main id="mainContent">
+    
+<section class="hero library-hero">
+  <div class="hero-copy">
+    <p class="eyebrow">Independent bookstore • curated reads • local events</p>
+    <h1>Find your next good book without wandering forever.</h1>
+    <p>Book Haven Bookstore helps readers choose meaningful books, journals, and gift bundles through staff picks, seasonal displays, and friendly in-store recommendations.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="gallery.html">Browse featured books</a>
+      <a class="btn secondary" href="about.html#requestForm">Request a special order</a>
+    </div>
+  </div>
+  <aside class="hero-card" aria-label="Featured store offer">
+    <h2>Weekend Reader Bundle</h2>
+    <p>Choose any paperback, journal, and bookmark for a simple gift set.</p>
+    <span class="price-badge">from $24</span>
+  </aside>
+</section>
+
+<section class="content-grid three-card-section" aria-labelledby="homeHighlights">
+  <h2 id="homeHighlights">Why readers visit Book Haven</h2>
+  <article class="info-card"><h3>Staff picks</h3><p>Short recommendations help customers compare books quickly instead of searching alone.</p></article>
+  <article class="info-card"><h3>Local pickup</h3><p>Customers can add books to a temporary cart and call the store to confirm pickup availability.</p></article>
+  <article class="info-card"><h3>Special orders</h3><p>A simple form lets visitors ask about titles not currently displayed in the gallery.</p></article>
+</section>
+
+<section class="split-section">
+  <div>
+    <h2>Designed for browsing and action</h2>
+    <p>The home page introduces the bookstore, explains the value of in-person recommendations, and points visitors to the product gallery and custom request form. The layout uses large headings, clear buttons, and readable contrast so the website feels welcoming but still practical.</p>
+  </div>
+  <div class="note-box">
+    <h3>Today’s store focus</h3>
+    <ul>
+      <li>New fiction arrivals</li>
+      <li>Reader journals and stationery</li>
+      <li>Book club signup for Saturday</li>
+    </ul>
+  </div>
+</section>
+
+  </main>
+  
+<footer class="site-footer">
+  <section class="footer-newsletter" aria-labelledby="newsletterHeading">
+    <h2 id="newsletterHeading">Join the reading list</h2>
+    <p>Receive monthly staff picks, event updates, and special-order reminders.</p>
+    <form id="subscribeForm" class="inline-form" novalidate>
+      <label for="subscribeEmail">Email address</label>
+      <input id="subscribeEmail" name="subscribeEmail" type="email" placeholder="reader@example.com" required>
+      <button type="submit">Subscribe</button>
+    </form>
+    <p id="subscribeMessage" class="form-message" aria-live="polite"></p>
+  </section>
+  <nav class="footer-links" aria-label="Footer navigation">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">Contact</a>
+    <a href="events.html">Events</a>
+  </nav>
+  <p class="copyright">© 2026 Book Haven Bookstore. Fictional student project.</p>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>
